@@ -1,159 +1,35 @@
 <template>
   <div id="a">
     <div class="b">
-      <form @submit.prevent="add" action="login.php" method="POST">
-        <div class="d">
-          <h4>
-            Simulasi Kredit
-            <hr size="2px" color="black" />
-          </h4>
-          <p>
-            <label><b>Nama Motor:</b></label
-            ><br />
-            <select
-              style="width: 300px"
-              type="select"
-              v-model="namamotor"
-              required
-            >
-              <option value="">Pilih Motor</option>
-              <option
-                v-bind:value="user.harga"
-                v-for="user in Project6"
-                :key="user.id"
-              >
-                {{ user.namamotor }}
-              </option>
-            </select>
-          </p>
-          <p>
-            <label><b>Harga:</b></label
-            ><br />
-            <input
-              style="width: 300px"
-              placeholder="0"
-              type="text"
-              v-model="namamotor"
-              required
-              disabled
-            />
-          </p>
-          <p>
-            <label><b>DP:</b> </label><br />
-            <input
-              style="width: 100px"
-              type="radio"
-              value="30"
-              v-model="depe"
-              required
-            />
-            <label style="width: 100px"><b>30%</b></label>
-          </p>
-          <p>
-            <label><b>Jangka Waktu:</b></label
-            ><br />
-            <input
-              style="width: 100px"
-              type="radio"
-              v-model="bulan"
-              value="12"
-              required
-            />
-            <label style="width: 100px"><b>12 bulan</b></label
-            ><br />
-            <input
-              style="width: 100px"
-              type="radio"
-              v-model="bulan"
-              value="24"
-            />
-            <label style="width: 100px"><b>24 bulan</b></label>
-          </p>
-          <p>
-            <label><b>Angsuran:</b></label
-            ><br />
-            <input
-              style="width: 300px"
-              placeholder="Angsuran..."
-              type="text"
-              v-model="hargamotor"
-              disabled
-            />
-          </p>
-          <button
-            type="submit"
-            id="f"
-            v-show="!updateSubmit"
-            @click="fungsi"
-          >
-            Tambah Angsuran
-          </button>
-          <button
-            type="submit"
-            id="f"
-            v-show="updateSubmit"
-            @click="update(form)"
-          >
-            Update
-          </button>
-        </div>
-        <p><i>*Syarat & Ketentuan Berlaku</i></p>
-      </form>
-
 <div class="c">
   <h2 id="ab">Data Angsuran Motor</h2>
-  <table border="1">
+  <table style="width: 1140px;"
+  border="1">
     <thead>
       <tr>
+        <th>No</th>
         <th>Nama Motor</th>
+        <th>CC</th>
+        <th>Tahun Produksi</th>
         <th>Angsuran</th>
         <th>Gambar</th>
-        <th>Perubahan</th>
       </tr>
     </thead>
     <tbody>
       <tr v-for="user in Project6" :key="user.id">
         <td>
-          {{ user.namamotor }}
+          <b>{{ user.id }}</b>
+        </td>
+        <td>{{ user.namamotor }}</td>
+        <td>{{ user.cc }}</td>
+        <td>
+          {{ user.tahunproduksi }}
         </td>
         <td>
           {{ user.harga }}
         </td>
         <td>
           <img :src="user.gambar" width="80px" height="80px">
-        </td>
-        <td>
-          <b>
-            <u>
-              <button
-                style="
-                  width: 115px;
-                  text-align: center;
-                  margin-bottom: 5px;
-                  margin-left: 1px;
-                  margin-right: 1px;
-                  background-color: lime;
-                "
-                class="buttn"
-                @click="edit(user)"
-              >
-                Ubah
-              </button>
-              <br />
-              <button
-                style="width: 115px; 
-                text-align: center; 
-                margin-bottom: 5px;
-                margin-left: 1px;
-                margin-right: 1px;
-                background-color: gold"
-                class="buttn"
-                @click="del(user)"
-              >
-                Sold Out
-              </button>
-            </u>
-          </b>
         </td>
       </tr>
     </tbody>
@@ -299,11 +175,6 @@ export default {
   font-family: "Courier New", Courier, monospace;
   text-align: center;
 }
-.d {
-  padding: 20px;
-  margin-top: 28px;
-  border:2px dotted black;
-}
 #f {
   width: 300px;
 }
@@ -313,8 +184,5 @@ export default {
 }
 i {
   color: blue;
-}
-table {
-  width: 700px;
 }
 </style>

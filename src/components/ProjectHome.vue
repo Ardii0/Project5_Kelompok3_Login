@@ -176,7 +176,6 @@ Bagi sang pelanggan, Yahaha yang kuat adalah simbol kepercayaan dan kepemimpinan
 
 body {
   font-family: Arial;
-  padding: 10px;
   background: #f1f1f1;
 }
 

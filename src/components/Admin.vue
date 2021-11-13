@@ -3,10 +3,10 @@
  <p class="tulisan_login">Silahkan login</p>
 
   <label>Username</label>
-  <input type="text" name="username" v-model="form.username" class="form_login" placeholder="Username atau email ..">
+  <input type="text" name="username" v-model="form.username" class="form_login" placeholder="Masukan Username atau Email...">
 
   <label>Password</label>
-  <input type="password" name="password" v-model="form.password" class="form_login" placeholder="Password ..">
+  <input type="password" name="password" v-model="form.password" class="form_login" placeholder="Masukan Password...">
 
   <input type="button" @click="login()" class="tombol_login" value="LOGIN">
 

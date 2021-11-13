@@ -6,8 +6,8 @@
  </div>
  <div class="sidebarb">
   <div class="nav"></div>
-  <a href="/info-motor"><button class="btn"><i style="margin-right: ; color: white;5px" class="fa fa-book"></i></button><br></a>
-  <a href="/cal-culate"><button class="btn"><i style="margin-right: 5px; color: white;" class="fa fa-list"></i></button><br></a>
+  <a href="/info-motor"><button class="btn"><i style="margin-right: ; color: white;5px" class="fa fa-list"></i></button><br></a>
+  <a href="/beli-motor"><button class="btn"><i style="margin-right: 5px; color: white;" class="fas fa-motorcycle"></i></button><br></a>
   <a href="/peduli-crud"><button class="btn"><i style="margin-right: 5px; color: white;" class="fas fa-hand-holding-usd"></i></button><br></a>
   <a href="/ad-min"><button class="btnn"><i style="margin-right: 5px; color: white;" class="fas fa-sign-out-alt"></i></button><br></a>
  </div>
@@ -95,18 +95,10 @@
           <button
             type="submit"
             id="f"
-            v-show="!updateSubmit"
-            @click="fungsi"
-          >
-            Tambah Angsuran
-          </button>
-          <button
-            type="submit"
-            id="f"
             v-show="updateSubmit"
             @click="update(form)"
           >
-            Update
+            Beli 
           </button>
         </div>
         <p><i>*Syarat & Ketentuan Berlaku</i></p>
@@ -114,10 +106,14 @@
 
 <div class="c2">
   <h2 id="ab">Data Angsuran Motor</h2>
-  <table border="1">
+  <table style="width: 770px;"
+  border="1">
     <thead>
       <tr>
+        <th>No</th>
         <th>Nama Motor</th>
+        <th>CC</th>
+        <th>Tahun Produksi</th>
         <th>Angsuran</th>
         <th>Gambar</th>
         <th>Perubahan</th>
@@ -126,7 +122,14 @@
     <tbody>
       <tr v-for="user in Project6" :key="user.id">
         <td>
+          <b>{{ user.id }}</b>
+        </td>
+        <td>
           {{ user.namamotor }}
+        </td>
+        <td>{{ user.cc }}</td>
+        <td>
+          {{ user.tahunproduksi }}
         </td>
         <td>
           {{ user.harga }}
@@ -149,7 +152,7 @@
                 class="buttn"
                 @click="edit(user)"
               >
-                Ubah
+                Pilih
               </button>
               <br />
               <button
@@ -307,11 +310,13 @@ export default {
 }
 .sidebarb {
  width: 70px;
- height: 606px;
+ height: 645px;
  background: #3A3A3AFF;
  float: left;
 }
-table {
-  width: 650px;
+.d {
+  padding: 20px;
+  margin-top: 28px;
+  border:2px dotted black;
 }
 </style>

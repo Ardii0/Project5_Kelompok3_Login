@@ -6,8 +6,8 @@
  </div>
  <div class="sidebarc">
   <div class="nav"></div>
-  <a href="/info-motor"><button class="btn"><i style="margin-right: ; color: white;5px" class="fa fa-book"></i></button><br></a>
-  <a href="/beli-motor"><button class="btn"><i style="margin-right: 5px; color: white;" class="fa fa-list"></i></button><br></a>
+  <a href="/info-motor"><button class="btn"><i style="margin-right: ; color: white;5px" class="fa fa-list"></i></button><br></a>
+  <a href="/beli-motor"><button class="btn"><i style="margin-right: 5px; color: white;" class="fas fa-motorcycle"></i></button><br></a>
   <a href="/peduli-crud"><button class="btn"><i style="margin-right: 5px; color: white;" class="fas fa-hand-holding-usd"></i></button><br></a>
   <a href="/ad-min"><button class="btnn"><i style="margin-right: 5px; color: white;" class="fas fa-sign-out-alt"></i></button><br></a>
  </div>
@@ -101,7 +101,7 @@
                 <th class="thh">Kegiatan</th>
                 <th class="thh">Tempat</th>
                 <th class="thh">Tanggal</th>
-                <th class="thh">Action</th>
+                <th class="thh">Perubahan</th>
               </tr>
             </thead>
             <tbody>

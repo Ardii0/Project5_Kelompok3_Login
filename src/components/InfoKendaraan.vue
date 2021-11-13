@@ -1,90 +1,9 @@
 <template>
   <div id="a">
     <div class="b">
-      <form @submit.prevent="add" action="login.php" method="POST">
-        <div class="d">
-          <h4>
-            Tambahkan Motor Baru
-            <hr size="2px" color="black" />
-          </h4>
-          <p>
-            <label><b>Nama Motor:</b></label
-            ><br />
-            <input
-              style="width: 300px"
-              placeholder="Masukkan Jenis Motor..."
-              type="text"
-              v-model="form.namamotor"
-              required
-            />
-          </p>
-          <p>
-            <label><b>CC:</b></label
-            ><br />
-            <input
-              style="width: 300px"
-              placeholder="CC..."
-              type="text"
-              v-model="form.cc"
-              required
-            />
-          </p>
-          <p>
-            <label><b>Tahun Produksi:</b> </label><br />
-            <input
-              style="width: 300px"
-              placeholder="Tahun Produksi..."
-              type="text"
-              v-model="form.tahunproduksi"
-              required
-            />
-          </p>
-          <p>
-            <label><b>Harga:</b></label
-            ><br />
-            <input
-              style="width: 300px"
-              placeholder="Masukkan Harga Motor..."
-              type="text"
-              v-model="form.harga"
-              required
-            />
-          </p>
-          <p>
-            <label><b>Gambar:</b></label
-            ><br />
-            <input
-              style="width: 300px"
-              placeholder="Masukkan Link Gambar..."
-              type="text"
-              v-model="form.gambar"
-              required
-            />
-          </p>
-          <button
-            class="btn btn-info"
-            type="submit"
-            id="f"
-            v-show="!updateSubmit"
-          >
-            Tambah Motor 
-          </button>
-          <button
-            class="btn btn-info"
-            type="submit"
-            id="f"
-            v-show="updateSubmit"
-            @click="update(form)"
-          >
-            Update
-          </button>
-        </div>
-        <p><i>*Syarat & Ketentuan Berlaku</i></p>
-      </form>
-
       <div class="c">
         <h2 id="ab">Daftar Motor Siap Jual</h2>
-        <table
+        <table style="width: 1140px;"
         border="1">
           <thead >
             <tr>
@@ -94,7 +13,6 @@
               <th >Tahun Produksi</th>
               <th >Harga</th>
               <th>Gambar</th>
-              <th >Perubahan</th>
             </tr>
           </thead>
           <tbody >
@@ -112,32 +30,6 @@
               </td>
               <td>
                 <img :src="user.gambar" width="80px" height="80px">
-              </td>
-              <td>
-                <b>
-                  <u>
-                    <button
-                      style="
-                        width: 115px;
-                        text-align: center;
-                        margin-bottom: 5px;
-                        background-color: lime
-                      "
-                      class="btn btn-success"
-                      @click="edit(user)"
-                    >
-                      Ubah
-                    </button>
-                    <br />
-                    <button
-                      style="width: 115px; text-align: center; background-color: gold"
-                      class="btn btn-danger"
-                      @click="del(user)"
-                    >
-                      Sold Out
-                    </button>
-                  </u>
-                </b>
               </td>
             </tr>
           </tbody>

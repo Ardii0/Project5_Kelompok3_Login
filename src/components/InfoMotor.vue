@@ -6,8 +6,8 @@
  </div>
  <div class="sidebara">
   <div class="nav"></div>
-  <a href="/info-motor"><button class="btn"><i style="margin-right: ; color: white;5px" class="fa fa-book"></i></button><br></a>
-  <a href="/beli-motor"><button class="btn"><i style="margin-right: 5px; color: white;" class="fa fa-list"></i></button><br></a>
+  <a href="/info-motor"><button class="btn"><i style="margin-right: ; color: white;5px" class="fa fa-list"></i></button><br></a>
+  <a href="/beli-motor"><button class="btn"><i style="margin-right: 5px; color: white;" class="fas fa-motorcycle"></i></button><br></a>
   <a href="/peduli-crud"><button class="btn"><i style="margin-right: 5px; color: white;" class="fas fa-hand-holding-usd"></i></button><br></a>
   <a href="/ad-min"><button class="btnn"><i style="margin-right: 5px; color: white;" class="fas fa-sign-out-alt"></i></button><br></a>
  </div>
@@ -97,17 +97,17 @@
 
       <div class="c">
         <h2 id="ab">Daftar Motor Siap Jual</h2>
-        <table
+        <table style="width: 770px;"
         border="1">
           <thead >
             <tr>
-              <th >No</th>
-              <th >Nama Motor</th>
-              <th >CC</th>
-              <th >Tahun Produksi</th>
-              <th >Harga</th>
+              <th>No</th>
+              <th>Nama Motor</th>
+              <th>CC</th>
+              <th>Tahun Produksi</th>
+              <th>Harga</th>
               <th>Gambar</th>
-              <th >Perubahan</th>
+              <th>Perubahan</th>
             </tr>
           </thead>
           <tbody >
@@ -134,7 +134,8 @@
                         width: 115px;
                         text-align: center;
                         margin-bottom: 5px;
-                        background-color: lime
+                        background-color: lime;
+                        border-radius: 10px;
                       "
                       class="btn btn-success"
                       @click="edit(user)"
@@ -143,7 +144,11 @@
                     </button>
                     <br />
                     <button
-                      style="width: 115px; text-align: center; background-color: gold"
+                      style="width: 115px; 
+                      text-align: center; 
+                      background-color: gold;
+                      border-radius: 10px;
+                      "
                       class="btn btn-danger"
                       @click="del(user)"
                     >
@@ -250,7 +255,7 @@ export default {
 #aa {
   border-radius: 25px;
   background-color: rgb(180, 70, 70);
-  margin-left: 100px;
+  margin-left: 110px;
   margin-right: 50px;
   margin-top: 40px;
   margin-bottom: 20px;
@@ -268,7 +273,7 @@ export default {
 }
 .sidebara {
  width: 70px;
- height: 606px;
+ height: 645px;
  background: #3A3A3AFF;
  float: left;
 }
