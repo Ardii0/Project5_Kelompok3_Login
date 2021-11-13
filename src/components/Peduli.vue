@@ -1,51 +1,119 @@
 <template>
 <div>
-<div style="
-position: absolute;
-margin-left: 700px;
-padding-top: 30px;
-">
-<ul>
-    <li>kita dari pihak dealer yahaha membagikan sedekah berupa bingkisan untuk semua orang yang melintas di sekitar </li>
-    <br>
-    <li>
-Berikanlah sedekah! Karena sedekah itu ibarat sungai yang mengalir.<br> Kamu hanya akan terus memperoleh manfaat dari air bersihnya.
-
-Satu sedekah yang tulus sama dengan seribu langkah menuju surga.
-
-Tetaplah berbagi meskipun kau merasa tak punya apa-apa. Karena kau bisa berbagi perhatian, kasih sayang, juga cinta. Tuluslah ketika berbagi.
-
-Ketika kamu bersedekah, ulurkanlah tangan kananmu dan sembunyikanlah tangan kirimu.
-
-Berbahagialah orang yang bisa memberi tanpa mengingat-ingat dan orang yang mengambil tanpa melupakan (yang memberinya).
-
-Ketika Allah memberimu nikmat secara finansial, jangan tingkatkan standar hidupmu, akan tetapi tingkatkan standarmu dalam bersedekah.
-
-Tidak pernah ada orang yang jatuh miskin karena sedekah.
-
-Obati penyakitmu dengan bersedekah.
-
-Berapa pun penghasilan kita hari ini, sisihkan untuk bersedekah. Bahkan, paksa diri untuk mampu berbagi setiap hari. Tak harus selalu dengan materi, bisa juga dengan jasa yang kita miliki.
-
-Ketika Allah memberikan kelebihan rezeki, janganlah engkau meningkatkan gaya hidupmu, tapi jadilah orang yang lebih dermawan.
-
-Apa yang kamu makan akan habis, apa yang kamu beri akan kekal.
-
-Sedekah adalah harta kita yang sesungguhnya.
-
-</li>
-</ul>
-</div>
-    <img style="height: 400px;
-    width: 670px;
-    margin-top: 20px;
+<div class="ped">
+    <h2 id="abz">Daftar Kegiatan</h2>
+    <br />
+    <table
+    style="
+    color: black;
+    border: 1px solid black;
+    border-collapse: collapse;
+    width: 1200px;
     "
-    src="sedekah.jpg">
+    >
+    <thead>
+        <tr>
+        <th class="thh">No</th>
+        <th class="thh">Kegiatan</th>
+        <th class="thh">Tempat</th>
+        <th class="thh">Tanggal</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr v-for="user in Kegiatan" :key="user.id">
+        <td class="tdd">
+            <b>{{ user.id }}</b>
+        </td>
+        <td class="tdd">{{ user.namakegiatan }}</td>
+        <td class="tdd">{{ user.tempat }}</td>
+        <td class="tdd">
+            {{ user.tanggal }}
+        </td>
+        </tr>
+    </tbody>
+    </table>
+</div>
 </div>
 </template>
 
 <script>
+/* eslint-disable */
+import axios from "axios";
 export default {
-    name: "Peduli"
-}
+  data() {
+    return {
+      form: {
+        id: "",
+        namakegiatan: "",
+        tempat: "",
+        tanggal: "",
+      },
+      Kegiatan: "",
+      updateSubmit: false,
+    };
+  },
+  mounted() {
+    this.load();
+  },
+  methods: {
+    load() {
+      axios
+        .get("http://localhost:3000/Kegiatan/")
+        .then((res) => {
+          this.Kegiatan = res.data; //respon dari rest api dimasukan ke users
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    },
+    add() {
+      axios.post("http://localhost:3000/Kegiatan/", this.form).then((res) => {
+        this.load();
+        this.form.namakegiatan = "";
+        this.form.tempat = "";
+        this.form.tanggal = "";
+      });
+    },
+    edit(user) {
+      this.updateSubmit = true;
+      this.form.id = user.id;
+      this.form.namakegiatan = user.namakegiatan;
+      this.form.tempat = user.tempat;
+      this.form.tanggal = user.tanggal;
+    },
+    update(form) {
+      return axios
+        .put("http://localhost:3000/Kegiatan/" + form.id, {
+          namakegiatan: this.form.namakegiatan,
+          tempat: this.form.tempat,
+          tanggal: this.form.tanggal,
+        })
+        .then((res) => {
+          this.load();
+          this.form.id = "";
+          this.form.namakegiatan = "";
+          this.form.tempat = "";
+          this.form.tanggal = "";
+          this.updateSubmit = false;
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    },
+    del(user) {
+      axios.delete(" http://localhost:3000/Kegiatan/" + user.id).then((res) => {
+        this.load();
+        let index = this.Kegiatan.indexOf(form.motor);
+        this.Kegiatan.splice(index, 1);
+      });
+    },
+  },
+};
 </script>
+<style>
+.ped {
+  margin-left: 10px;
+  margin-right: 40px;
+  padding-top: 20px;
+}
+</style>

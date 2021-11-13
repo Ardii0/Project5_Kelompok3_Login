@@ -1,5 +1,18 @@
 <template>
-  <div id="a">
+<div>
+
+ <div class="navbar">
+  <h3 class="admin">Dashboard Admin</h3>
+ </div>
+ <div class="sidebara">
+  <div class="nav"></div>
+  <a href="/info-motor"><button class="btn"><i style="margin-right: ; color: white;5px" class="fa fa-book"></i></button><br></a>
+  <a href="/beli-motor"><button class="btn"><i style="margin-right: 5px; color: white;" class="fa fa-list"></i></button><br></a>
+  <a href="/peduli-crud"><button class="btn"><i style="margin-right: 5px; color: white;" class="fas fa-hand-holding-usd"></i></button><br></a>
+  <a href="/ad-min"><button class="btnn"><i style="margin-right: 5px; color: white;" class="fas fa-sign-out-alt"></i></button><br></a>
+ </div>
+ 
+  <div id="aa">
     <div class="b">
       <form @submit.prevent="add" action="login.php" method="POST">
         <div class="d">
@@ -145,13 +158,14 @@
       </div>
     </div>
   </div>
+</div>
 </template>
 
 <script>
 /* eslint-disable */
 import axios from "axios";
 export default {
-  name: "Motorr",
+  name: "InfoMotor",
   data() {
     return {
       form: {
@@ -232,3 +246,30 @@ export default {
   },
 };
 </script>
+<style>
+#aa {
+  border-radius: 25px;
+  background-color: rgb(180, 70, 70);
+  margin-left: 100px;
+  margin-right: 50px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  color: white;
+  height: 570px;
+}
+.ca {
+  margin-left: 20px;
+  margin-right: 40px;
+  padding-top: 20px;
+  font-family: "Courier New", Courier, monospace;
+  text-align: center;
+}
+.sidebara {
+ width: 70px;
+ height: 606px;
+ background: #3A3A3AFF;
+ float: left;
+}
+</style>

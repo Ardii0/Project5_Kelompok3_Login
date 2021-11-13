@@ -1,5 +1,17 @@
 <template>
-  <div id="a">
+    <div>
+
+ <div class="navbar">
+  <h3 class="admin">Dashboard Admin</h3>
+ </div>
+ <div class="sidebarb">
+  <div class="nav"></div>
+  <a href="/info-motor"><button class="btn"><i style="margin-right: ; color: white;5px" class="fa fa-book"></i></button><br></a>
+  <a href="/cal-culate"><button class="btn"><i style="margin-right: 5px; color: white;" class="fa fa-list"></i></button><br></a>
+  <a href="/peduli-crud"><button class="btn"><i style="margin-right: 5px; color: white;" class="fas fa-hand-holding-usd"></i></button><br></a>
+  <a href="/ad-min"><button class="btnn"><i style="margin-right: 5px; color: white;" class="fas fa-sign-out-alt"></i></button><br></a>
+ </div>
+  <div id="a1">
     <div class="b">
       <form @submit.prevent="add" action="login.php" method="POST">
         <div class="d">
@@ -100,7 +112,7 @@
         <p><i>*Syarat & Ketentuan Berlaku</i></p>
       </form>
 
-<div class="c">
+<div class="c2">
   <h2 id="ab">Data Angsuran Motor</h2>
   <table border="1">
     <thead>
@@ -161,6 +173,7 @@
       </div>
     </div>
   </div>
+    </div>
 </template>
 
 <script>
@@ -273,10 +286,10 @@ export default {
 };
 </script>
 <style>
-#a {
+#a1 {
   border-radius: 25px;
   background-color: rgb(180, 70, 70);
-  margin-left: 60px;
+  margin-left: 100px;
   margin-right: 50px;
   margin-top: 40px;
   margin-bottom: 20px;
@@ -285,36 +298,20 @@ export default {
   color: white;
   height: 570px;
 }
-.b {
-  display: flex;
-  text-align: left;
-  padding-left: 30px;
-  background-color: red;
-  height: 510px;
-}
-.c {
+.c2 {
   margin-left: 20px;
   margin-right: 40px;
   padding-top: 20px;
   font-family: "Courier New", Courier, monospace;
   text-align: center;
 }
-.d {
-  padding: 20px;
-  margin-top: 28px;
-  border:2px dotted black;
-}
-#f {
-  width: 300px;
-}
-#ab {
-  text-align: left;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-}
-i {
-  color: blue;
+.sidebarb {
+ width: 70px;
+ height: 606px;
+ background: #3A3A3AFF;
+ float: left;
 }
 table {
-  width: 700px;
+  width: 650px;
 }
 </style>

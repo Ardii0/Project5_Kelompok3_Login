@@ -1,43 +1,10 @@
 <template>
     <div class="all">
 <div class="row">
-  <div class="leftcolumn">
-    <div class="card">
-      <div style="
-      position: absolute;
-      padding-top: 200px;
-      padding-left: 480px;">
-      <h2>Misi</h2>
-      <ul>
-        <li>Menyediakan produk pilihan yang inovatif dan bermutu tinggi<br> dengan harga yang terjangkau.</li>
-        <li>Senantiasa meningkatkan kompetensi karyawan, teknologi,<br> dan proses produksi.</li>
-      </ul>
-      </div>
-      <div style="
-      position: absolute;
-      padding-top: 50px;
-      padding-left: 480px;">
-      <h2>Visi</h2>
-      <ul>
-        <li>Untuk menciptakan masyarakat Yahaha yang sejahtera, <br>loyal dan
-          mencapai perkembangan bisnis yang sehat<br> dan berkelanjutan.</li>
-        <li>Untuk menjadi produsen sepeda motor terdepan di Indonesia</li>
-      </ul>
-      </div>
-      <h2>SAMBUTAN DARI KAMI PIHAK YAHAHA</h2>
-      <h5>November 9,2021</h5>
-      <img src="aerox.jpg">
-      <p>PT.YAHAHA Indonesia didirikan pada tahun 2004. Bisnis utama kami adalah berbisnis sepeda motor. Kami mempunyai dua puluh pabrik di seluruh Indonesia dan telah mendistribusikan produk ke seluruh wilayah Indonesia.
-Brand brant kami dimulai dari trail, sport, matic, dll kami akan terus membuat motor-motor yang orisinil dan pertama di Indonesia, serta berkontribusi terhadap perwujudan kehidupan yang sejahtera bagi konsumen Indonesia.
-Fokus kami adalah memahami dengan baik keinginan dan kendala yang dihadapi oleh para pelanggan kami. Semakin kami memahami kebutuhan para pelanggan, semakin kami dapat mengembangkan produk baru yang memenuhi kebutuhan tersebut.
-Berkat saran dari pelanggan, kami memutuskan untuk membuat tampilan website Yamaha dan kami sangat berterima kasih untuk itu. Mungkin saran tersebut tampak sederhana, tetapi hasilnya sangat luar biasa. Hingga kini, lebih dari setengah penjualan kami berasal dari pemesanan melalui internet dan jumlahnya terus meningkat.
-Bagi sang pelanggan, Yamaha yang kuat adalah simbol kepercayaan dan kepemimpinan, yang memberikan rasa percaya diri dan rasa yakin. Yamaha bukan saja menjadi maskapai terbesar, tetapi juga menjadi pilihan utama mereka. Ini adalah semangat AirAsia. Percayalah saat saya mengatakan bahwa semangat kami untuk menjadi yang terbaik tidak akan pernah padam.
-       </p>
-    </div>
-  </div>
   <div class="rightcolumn">
     <div class="card">
       <h3>Our Contact</h3>
+      <div class="nurun">
       <p>
         <span style="position: absolute;
         padding-left: 40px;
@@ -158,17 +125,47 @@ Bagi sang pelanggan, Yamaha yang kuat adalah simbol kepercayaan dan kepemimpinan
     </div>
   </div>
 </div>
+  <div class="leftcolumn">
+    <div class="card">
+      <div style="
+      position: absolute;
+      padding-top: 200px;
+      padding-left: 480px;">
+      <h2 style="margin-top: -30px">Misi</h2>
+      <ul>
+        <li>Menyediakan produk pilihan yang inovatif dan bermutu tinggi<br> dengan harga yang terjangkau.</li>
+        <li>Senantiasa meningkatkan kompetensi karyawan, teknologi,<br> dan proses produksi.</li>
+      </ul>
+      </div>
+      <div style="
+      position: absolute;
+      padding-top: 50px;
+      padding-left: 480px;">
+      <h2>Visi</h2>
+      <ul>
+        <li>Untuk menciptakan masyarakat Yahaha yang sejahtera, <br>loyal dan
+          mencapai perkembangan bisnis yang sehat<br> dan berkelanjutan.</li>
+        <li>Untuk menjadi produsen sepeda motor terdepan di Indonesia</li>
+      </ul>
+      </div>
+      <h2>SAMBUTAN DARI KAMI PIHAK YAHAHA</h2>
+      <h5>November 9,2021</h5>
+      <img src="aerox.jpg">
+      <p>PT.YAHAHA Indonesia didirikan pada tahun 2004. Bisnis utama kami adalah berbisnis sepeda motor. Kami mempunyai dua puluh pabrik di seluruh Indonesia dan telah mendistribusikan produk ke seluruh wilayah Indonesia.
+Brand brant kami dimulai dari trail, sport, matic, dll kami akan terus membuat motor-motor yang orisinil dan pertama di Indonesia, serta berkontribusi terhadap perwujudan kehidupan yang sejahtera bagi konsumen Indonesia.
+Fokus kami adalah memahami dengan baik keinginan dan kendala yang dihadapi oleh para pelanggan kami. Semakin kami memahami kebutuhan para pelanggan, semakin kami dapat mengembangkan produk baru yang memenuhi kebutuhan tersebut.
+Berkat saran dari pelanggan, kami memutuskan untuk membuat tampilan website Yamaha dan kami sangat berterima kasih untuk itu. Mungkin saran tersebut tampak sederhana, tetapi hasilnya sangat luar biasa. Hingga kini, lebih dari setengah penjualan kami berasal dari pemesanan melalui internet dan jumlahnya terus meningkat.
+Bagi sang pelanggan, Yamaha yang kuat adalah simbol kepercayaan dan kepemimpinan, yang memberikan rasa percaya diri dan rasa yakin. Yamaha bukan saja menjadi maskapai terbesar, tetapi juga menjadi pilihan utama mereka. Ini adalah semangat AirAsia. Percayalah saat saya mengatakan bahwa semangat kami untuk menjadi yang terbaik tidak akan pernah padam.
+       </p>
+    </div>
+  </div>
+</div>
     </div>
 </template>
 
 <script>
     export default {
-        name: 'ProjectHome',
-        computed: {
-            listAgenda() {
-                return this.$store.state.listAgenda
-            }
-        }
+        name: 'ProjectHome'
     }
 </script>
 
@@ -201,7 +198,7 @@ body {
 .topnav a {
   float: left;
   display: block;
-  color: #f2f2f2;
+  color: white;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -214,22 +211,22 @@ body {
 
 .leftcolumn {   
   float: left;
-  width: 75%;
-
+  width: 76%;
+  margin-top: 20px;
 }
 
 .rightcolumn {
   float: left;
-  width: 25%;
-  background-color: #f1f1f1;
-  padding-left: 20px;
+  width: 22.5%;
+  position: absolute;
+  margin-left: 930px;
+  margin-top: 20px;
+  margin-right: 70px;
 }
 
 .card {
   background-color: white;
-  padding: 20px;
-  margin-top: 20px;
-  height: 615px;
+  height: 500px;
 }
 
 .row:after {
@@ -250,5 +247,9 @@ body {
     float: none;
     width: 100%;
   }
+}
+.nurun{
+  padding-top: 10px;
+  padding-left: 10px;
 }
 </style>

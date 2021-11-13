@@ -1,6 +1,6 @@
 <template>
-  <div id="app" class="container">
-    <div class="row py-4">
+  <div id="app">
+    <div>
       <Header/>
       <router-view></router-view>
     </div>
