@@ -154,8 +154,8 @@
       <p>PT.YAHAHA Indonesia didirikan pada tahun 2004. Bisnis utama kami adalah berbisnis sepeda motor. Kami mempunyai dua puluh pabrik di seluruh Indonesia dan telah mendistribusikan produk ke seluruh wilayah Indonesia.
 Brand brant kami dimulai dari trail, sport, matic, dll kami akan terus membuat motor-motor yang orisinil dan pertama di Indonesia, serta berkontribusi terhadap perwujudan kehidupan yang sejahtera bagi konsumen Indonesia.
 Fokus kami adalah memahami dengan baik keinginan dan kendala yang dihadapi oleh para pelanggan kami. Semakin kami memahami kebutuhan para pelanggan, semakin kami dapat mengembangkan produk baru yang memenuhi kebutuhan tersebut.
-Berkat saran dari pelanggan, kami memutuskan untuk membuat tampilan website Yamaha dan kami sangat berterima kasih untuk itu. Mungkin saran tersebut tampak sederhana, tetapi hasilnya sangat luar biasa. Hingga kini, lebih dari setengah penjualan kami berasal dari pemesanan melalui internet dan jumlahnya terus meningkat.
-Bagi sang pelanggan, Yamaha yang kuat adalah simbol kepercayaan dan kepemimpinan, yang memberikan rasa percaya diri dan rasa yakin. Yamaha bukan saja menjadi maskapai terbesar, tetapi juga menjadi pilihan utama mereka. Ini adalah semangat AirAsia. Percayalah saat saya mengatakan bahwa semangat kami untuk menjadi yang terbaik tidak akan pernah padam.
+Berkat saran dari pelanggan, kami memutuskan untuk membuat tampilan website Yahaha dan kami sangat berterima kasih untuk itu. Mungkin saran tersebut tampak sederhana, tetapi hasilnya sangat luar biasa. Hingga kini, lebih dari setengah penjualan kami berasal dari pemesanan melalui internet dan jumlahnya terus meningkat.
+Bagi sang pelanggan, Yahaha yang kuat adalah simbol kepercayaan dan kepemimpinan, yang memberikan rasa percaya diri dan rasa yakin. Yahaha bukan saja menjadi maskapai terbesar, tetapi juga menjadi pilihan utama mereka. Ini adalah semangat AirAsia. Percayalah saat saya mengatakan bahwa semangat kami untuk menjadi yang terbaik tidak akan pernah padam.
        </p>
     </div>
   </div>
